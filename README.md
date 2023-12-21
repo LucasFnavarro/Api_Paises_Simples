@@ -6,6 +6,7 @@
 
 ⇒ API consumida: https://restcountries.com/
 <br>
+<br>
 ⇒ Funções adicionadas
 <br>
 ⇒ Foi adicionado as linguagens de cada País.
