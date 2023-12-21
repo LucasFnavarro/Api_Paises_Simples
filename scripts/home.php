@@ -13,7 +13,8 @@ $countries = $api->get_all_countries();
 <div class="container mt-5">
     <div class="row">
         <div class="col text-center">
-            <h3>Países do Mundo</h3>
+            <h3>Países do Mundo</h3><br>
+            <span style="color: red;">[CORRIGINDO OS ERROS DE ALGUNS PAÍSES]</span>
             <hr>
         </div>
     </div>

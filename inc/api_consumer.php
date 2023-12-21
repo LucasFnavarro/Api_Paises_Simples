@@ -9,7 +9,7 @@ class ApiConsumer
         curl_setopt_array($curl, [
             CURLOPT_URL => "https://restcountries.com/v3.1/$endpoint",
             CURLOPT_RETURNTRANSFER => true,
-            // CURLOPT_SSL_VERIFYPEER => false,
+            //CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,

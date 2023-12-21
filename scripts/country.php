@@ -4,7 +4,7 @@ defined('CONTROL') or die('Acesso negado!');
 $api = new ApiConsumer();
 $country = $_GET['country_name'] ?? null;
 
-if(!$country){
+if (!$country) {
     header('Location: ?route=home');
     die();
 }
@@ -18,9 +18,9 @@ $country_data = $api->get_country($country);
             <img src="<?= $country_data[0]['flags']['png'] ?>" alt="fotoPais">
         </div>
         <div class="ms-5 align-self-center">
-    <p class="display-3"><strong><?= $country_data[0]['name']['common'] ?></p></strong>
-    <p class="p-0 m-0">Capital:</p>
-    <h4 class="p-0 m-0"><?= $country_data[0]['capital'][0] ?></h4>
+            <p class="display-3"><strong><?= $country_data[0]['name']['common'] ?></p></strong>
+            <p class="p-0 m-0">Capital:</p>
+            <h4 class="p-0 m-0"><?= $country_data[0]['capital'][0] ?></h4>
         </div>
     </div>
 
@@ -30,6 +30,7 @@ $country_data = $api->get_country($country);
             <p>Sub-região: <br><strong><?= $country_data[0]['subregion'] ?></strong></p>
             <p>População: <br><strong><?= $country_data[0]['population'] ?></strong> Habitantes</p>
             <p>Área: <br><strong><?= $country_data[0]['area'] ?></strong> km<sup>2</sup></p>
+            <p>Linguagens: <br><strong><?= implode(" / ", $country_data[0]['languages']); ?></strong></p>
 
         </div>
     </div>
